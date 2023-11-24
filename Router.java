@@ -7,7 +7,7 @@ import java.util.Queue;
 public class Router {
     private final int maxClients ;
     private Semaphore semaphore ;
-    private ArrayList<Device> devices = new ArrayList<>();
+   private Queue<Device> devices = new LinkedList<>();
     public Router(int maxClients) throws IOException {
         this.maxClients = maxClients;
         semaphore = new Semaphore(maxClients);
